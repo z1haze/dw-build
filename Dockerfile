@@ -8,5 +8,7 @@ RUN apt-get update \
 && apt-get upgrade -y \
 && apt-get install -y rsync zip
 
-# enter the node shell so the bitbucket.yml pipeline can execute its node scripts
+RUN mkdir -p dw && cd dw && wget https://raw.githubusercontent.com/z1haze/dw-deploy/master/dwdeploy.sh
+
+# this command will confirm node was installed correctly, and fail out if the command fails
 CMD [ "node" ]
