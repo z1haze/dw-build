@@ -1,7 +1,7 @@
 # Demandware deployment Dockerfile
 
 # source of the image
-FROM node:8
+FROM node:12
 
 # install packages and update
 RUN apt-get update \
